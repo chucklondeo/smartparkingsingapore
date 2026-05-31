@@ -19,7 +19,7 @@ const solutions = [
     description:
       "Manage resident season parking, visitor passes, GIRO billing and multi-zone access for Singapore condominiums. Full integration with building management systems.",
     tags: ["Season Parking", "Visitor Pass", "GIRO Billing", "Resident App"],
-    accent: "#00D4FF",
+    accent: "#FF4C2B",
   },
   {
     icon: Building2,
@@ -27,7 +27,7 @@ const solutions = [
     description:
       "Multi-tenant parking management with hourly billing, season holder allocation, and real-time occupancy dashboards for office and commercial buildings.",
     tags: ["Multi-Tenant", "Hourly Rate", "Season Allocation", "Analytics"],
-    accent: "#7B61FF",
+    accent: "#00C896",
   },
   {
     icon: ShoppingBag,
@@ -35,7 +35,7 @@ const solutions = [
     description:
       "High-volume parking operations with NETS/PayNow kiosks, validation stamps, loyalty integration and dynamic pricing. Built for Singapore retail footfall.",
     tags: ["NETS/PayNow", "Validation", "Dynamic Pricing", "High Volume"],
-    accent: "#00FFE0",
+    accent: "#FFB800",
   },
   {
     icon: Landmark,
@@ -43,7 +43,7 @@ const solutions = [
     description:
       "Corporate season parking, car pool management, EV charging integration and monthly invoicing for Grade A office towers across the Singapore CBD.",
     tags: ["Corporate Season", "EV Charging", "Invoicing", "CBD Ready"],
-    accent: "#00D4FF",
+    accent: "#FF4C2B",
   },
   {
     icon: Car,
@@ -51,7 +51,7 @@ const solutions = [
     description:
       "LTA-compliant public carpark management with UEN-based season permits, government vehicle concessions, and automated barrier operations.",
     tags: ["LTA Compliant", "UEN Permits", "Barrier Auto", "Government"],
-    accent: "#7B61FF",
+    accent: "#00C896",
   },
   {
     icon: Briefcase,
@@ -59,7 +59,7 @@ const solutions = [
     description:
       "Centralised multi-site parking management for property managers overseeing multiple developments across Singapore. Single login, all properties.",
     tags: ["Multi-Site", "Centralised", "Reporting", "White Label"],
-    accent: "#00FFE0",
+    accent: "#FFB800",
   },
 ];
 

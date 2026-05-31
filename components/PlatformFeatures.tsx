@@ -107,9 +107,9 @@ const features = [
 const categories = ["All", "Payment", "Management", "Intelligence", "Hardware", "Integration"];
 
 const categoryColors: Record<string, string> = {
-  Payment: "#00D4FF",
-  Management: "#7B61FF",
-  Intelligence: "#00FFE0",
+  Payment: "#FF4C2B",
+  Management: "#00C896",
+  Intelligence: "#FFB800",
   Hardware: "#F59E0B",
   Integration: "#EC4899",
 };
@@ -172,7 +172,7 @@ export default function PlatformFeatures() {
         <motion.div layout className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {filtered.map((feature, i) => {
             const Icon = feature.icon;
-            const color = categoryColors[feature.category] || "#00D4FF";
+            const color = categoryColors[feature.category] || "#FF4C2B";
             return (
               <motion.div
                 key={feature.title}

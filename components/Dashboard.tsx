@@ -15,7 +15,7 @@ import {
   BarChart2,
 } from "lucide-react";
 
-function MiniBar({ value, max = 100, color = "#00D4FF" }: { value: number; max?: number; color?: string }) {
+function MiniBar({ value, max = 100, color = "#FF4C2B" }: { value: number; max?: number; color?: string }) {
   return (
     <div className="h-1.5 bg-white/5 rounded-full overflow-hidden">
       <motion.div
@@ -129,9 +129,9 @@ export default function Dashboard() {
             {/* KPI row */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
               {[
-                { label: "Today Revenue", value: "S$12,480", change: "+14.2%", icon: DollarSign, color: "#00D4FF" },
-                { label: "Occupancy Rate", value: "78%", change: "+3.1%", icon: Car, color: "#7B61FF" },
-                { label: "Transactions", value: "1,284", change: "+9.8%", icon: Activity, color: "#00FFE0" },
+                { label: "Today Revenue", value: "S$12,480", change: "+14.2%", icon: DollarSign, color: "#FF4C2B" },
+                { label: "Occupancy Rate", value: "78%", change: "+3.1%", icon: Car, color: "#00C896" },
+                { label: "Transactions", value: "1,284", change: "+9.8%", icon: Activity, color: "#FFB800" },
                 { label: "Active Alerts", value: "2", change: "Low", icon: AlertCircle, color: "#F59E0B" },
               ].map((kpi) => {
                 const Icon = kpi.icon;
@@ -160,9 +160,9 @@ export default function Dashboard() {
                 </div>
                 <div className="space-y-3">
                   {[
-                    { method: "NETS", pct: 38, color: "#00D4FF" },
-                    { method: "PayNow", pct: 29, color: "#7B61FF" },
-                    { method: "Visa/MC", pct: 21, color: "#00FFE0" },
+                    { method: "NETS", pct: 38, color: "#FF4C2B" },
+                    { method: "PayNow", pct: 29, color: "#00C896" },
+                    { method: "Visa/MC", pct: 21, color: "#FFB800" },
                     { method: "Season", pct: 12, color: "#F59E0B" },
                   ].map((item) => (
                     <div key={item.method}>
@@ -182,7 +182,7 @@ export default function Dashboard() {
                   <Car size={12} className="text-neon-blue" />
                   Live Occupancy
                 </div>
-                <DonutChart percentage={78} color="#00D4FF" />
+                <DonutChart percentage={78} color="#FF4C2B" />
                 <div className="mt-3 text-center">
                   <div className="text-xs text-white/40">156 / 200 Bays</div>
                   <div className="text-[10px] text-neon-blue mt-1">44 available</div>
@@ -248,7 +248,7 @@ export default function Dashboard() {
                         <span
                           className="text-[10px] px-1.5 py-0.5 rounded"
                           style={{
-                            color: log.payment === "NETS" ? "#00D4FF" : log.payment === "PayNow" ? "#7B61FF" : log.payment === "Season" ? "#F59E0B" : "#00FFE0",
+                            color: log.payment === "NETS" ? "#FF4C2B" : log.payment === "PayNow" ? "#00C896" : log.payment === "Season" ? "#F59E0B" : "#FFB800",
                             background: "rgba(255,255,255,0.04)",
                           }}
                         >
@@ -290,7 +290,7 @@ export default function Dashboard() {
                       <MiniBar
                         value={site.occupied}
                         max={site.total}
-                        color={site.occupied / site.total > 0.8 ? "#F59E0B" : "#00D4FF"}
+                        color={site.occupied / site.total > 0.8 ? "#F59E0B" : "#FF4C2B"}
                       />
                     </motion.div>
                   ))}

@@ -19,7 +19,7 @@ const reasons = [
     description:
       "Unlike most countries, Singapore parking revolves around monthly season permits. Londeo automates the full permit lifecycle — application, approval, renewal, cancellation and waitlist — with zero paper, zero manual chasing.",
     highlight: "Full digital season permit management",
-    color: "#00D4FF",
+    color: "#FF4C2B",
   },
   {
     icon: UserCheck,
@@ -27,7 +27,7 @@ const reasons = [
     description:
       "Singapore condominiums and office buildings require controlled visitor access. Residents issue digital passes via app; the visitor arrives and the gate opens automatically — no guardroom visit needed.",
     highlight: "Resident-issued digital visitor passes",
-    color: "#7B61FF",
+    color: "#00C896",
   },
   {
     icon: Wallet,
@@ -35,7 +35,7 @@ const reasons = [
     description:
       "NETS is still the dominant parking payment in Singapore. Londeo is one of the few platforms with certified NETS FlashPay + NETS QR alongside PayNow, Visa, Mastercard, Apple Pay and Google Pay.",
     highlight: "NETS + PayNow native integration",
-    color: "#00FFE0",
+    color: "#FFB800",
   },
   {
     icon: Building2,
@@ -59,7 +59,7 @@ const reasons = [
     description:
       "Monthly season parking fees in Singapore are traditionally collected by cheque or cash — an administrative burden for management. Londeo integrates GIRO auto-debit to eliminate manual collection entirely.",
     highlight: "Bank GIRO auto-debit ready",
-    color: "#00D4FF",
+    color: "#FF4C2B",
   },
 ];
 

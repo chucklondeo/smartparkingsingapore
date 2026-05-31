@@ -22,7 +22,7 @@ const hardwareProducts = [
     description:
       "4K AI-powered licence plate recognition camera with infrared night vision. Reads plates in motion up to 60km/h with 99.4% accuracy in Singapore conditions including wet weather.",
     specs: ["4K Resolution", "IR Night Vision", "IP67 Weatherproof", "PoE Powered", "Edge AI Processing"],
-    color: "#00D4FF",
+    color: "#FF4C2B",
     visual: "camera",
   },
   {
@@ -32,7 +32,7 @@ const hardwareProducts = [
     description:
       "High-speed boom barrier with 0.9-second opening time. Anti-crash detection, vehicle loop sensors and remote management via Londeo cloud platform.",
     specs: ["0.9s Open Speed", "Anti-Crash Sensor", "Loop Detector", "Remote Control", "LED Arm Status"],
-    color: "#7B61FF",
+    color: "#00C896",
     visual: "gate",
   },
   {
@@ -42,7 +42,7 @@ const hardwareProducts = [
     description:
       "Full-colour LED parking guidance displays for lot availability, directional arrows and promotional content. Managed centrally via Londeo CMS.",
     specs: ["Full Colour LED", "Real-Time Count", "Directional Arrows", "Cloud CMS", "Multi-Zone"],
-    color: "#00FFE0",
+    color: "#FFB800",
     visual: "led",
   },
   {
@@ -72,7 +72,7 @@ const hardwareProducts = [
     description:
       "Multi-door access control unit supporting RFID, PIN, mobile credentials and licence plate. Integrates with visitor management and season permit database.",
     specs: ["RFID / PIN", "Mobile Credential", "LPR Trigger", "Multi-Door", "Fail-Safe Lock"],
-    color: "#00D4FF",
+    color: "#FF4C2B",
     visual: "access",
   },
   {
@@ -82,7 +82,7 @@ const hardwareProducts = [
     description:
       "Industrial-grade edge computing unit installed on-site. Ensures zero-downtime operation during network outages. Processes LPR, payment and barrier control locally.",
     specs: ["Offline Operation", "Local Storage", "Auto Sync", "Fanless Design", "DIN Rail Mount"],
-    color: "#7B61FF",
+    color: "#00C896",
     visual: "edge",
   },
 ];
