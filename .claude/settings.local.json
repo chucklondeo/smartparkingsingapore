@@ -4,7 +4,13 @@
       "PowerShell(cd \"C:\\\\Users\\\\win\\\\OneDrive\\\\Londeo Singapore\\\\Londeo Parking website\"; Start-Process -NoNewWindow npm -ArgumentList \"run\",\"dev\" -RedirectStandardOutput \"$env:TEMP\\\\londeo-dev.log\" -RedirectStandardError \"$env:TEMP\\\\londeo-dev-err.log\"; Start-Sleep -Seconds 10; \\(Invoke-WebRequest -Uri \"http://localhost:3000\" -UseBasicParsing -ErrorAction SilentlyContinue\\).StatusCode)",
       "mcp__Claude_in_Chrome__tabs_context_mcp",
       "Bash(git init *)",
-      "Bash(git add *)"
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)",
+      "Bash(git config *)",
+      "Bash(git remote *)",
+      "Bash(git branch *)",
+      "Bash(git push *)",
+      "Bash(git commit *)"
     ]
   }
 }
