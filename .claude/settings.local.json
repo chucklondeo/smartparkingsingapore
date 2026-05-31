@@ -10,7 +10,10 @@
       "Bash(git remote *)",
       "Bash(git branch *)",
       "Bash(git push *)",
-      "Bash(git commit *)"
+      "Bash(git commit *)",
+      "Bash(npx skills *)",
+      "Bash(npm install *)",
+      "mcp__4eefee96-c88c-429e-90c0-715b38b81f1f__apply_migration"
     ]
   }
 }

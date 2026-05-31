@@ -2,12 +2,14 @@
 
 import { useRef, useState } from "react";
 import { motion, useInView } from "framer-motion";
-import { Send, MapPin, Mail, Phone, CheckCircle } from "lucide-react";
+import { Send, MapPin, CheckCircle, AlertCircle, Loader2 } from "lucide-react";
 
 export default function Contact() {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true });
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
   const [form, setForm] = useState({
     name: "",
     email: "",
@@ -16,9 +18,30 @@ export default function Contact() {
     message: "",
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
+    setLoading(true);
+    setError(null);
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+      });
+
+      const data = await res.json();
+
+      if (!res.ok) {
+        setError(data.error || "Something went wrong. Please try again.");
+      } else {
+        setSubmitted(true);
+      }
+    } catch {
+      setError("Network error. Please check your connection and try again.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -195,15 +218,32 @@ export default function Contact() {
                   />
                 </div>
 
+                {error && (
+                  <div className="flex items-center gap-2 p-3 rounded-lg bg-red-500/10 border border-red-500/20">
+                    <AlertCircle size={14} className="text-red-400 flex-shrink-0" />
+                    <p className="text-xs text-red-400">{error}</p>
+                  </div>
+                )}
+
                 <button
                   type="submit"
-                  className="group w-full relative py-3.5 rounded-xl font-semibold text-sm text-dark-900 overflow-hidden"
+                  disabled={loading}
+                  className="group w-full relative py-3.5 rounded-xl font-semibold text-sm text-dark-900 overflow-hidden disabled:opacity-70 disabled:cursor-not-allowed"
                 >
                   <div className="absolute inset-0 bg-neon-gradient" />
                   <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-10 transition-opacity" />
                   <span className="relative flex items-center justify-center gap-2">
-                    Book a Demo
-                    <Send size={14} className="group-hover:translate-x-0.5 transition-transform" />
+                    {loading ? (
+                      <>
+                        <Loader2 size={14} className="animate-spin" />
+                        Submitting...
+                      </>
+                    ) : (
+                      <>
+                        Book a Demo
+                        <Send size={14} className="group-hover:translate-x-0.5 transition-transform" />
+                      </>
+                    )}
                   </span>
                 </button>
 
